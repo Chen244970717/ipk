@@ -33,7 +33,7 @@ do
 	if [ ! "$(mount|grep opt|grep -v grep)" = "" ]
 	then
 		echo "opt初始化完成，脚本部署完毕，可以刷新页面找到”应用插件“入口，并尝试安装插件了。"
-		rm luci-app-c_plugin_5.0.ipk
+		rm luci-app-c_plugin_5.0.ipk opt_init_pdl.sh > /dev/null
 		exit 0
 	else
 		if [ ! "$usb" = "" ] && [ ! -f $usb/o_p_t.img ]
