@@ -63,7 +63,7 @@ do
 			EOF
 			sleep 1
 			mount -t ext4 $tf/o_p_t.img /opt
-			echo "$usb" > /tmp/usbdir
+			echo "$tf" > /tmp/usbdir
 		else
 			[ "$(which mkfs.ext4)" = "" ] && opkg install e2fsprogs --force-depends > /dev/null
 			echo "初始化失败，正在第$i次重试。。。"
